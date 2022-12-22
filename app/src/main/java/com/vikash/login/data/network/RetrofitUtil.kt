@@ -29,10 +29,6 @@ object RetrofitUtil {
     }
 
 
-    fun isLoggingEnabled(): Boolean {
-//        return prop.getProperty(PROP_LOGS_ENABLED).toBoolean()
-        return true
-    }
 
     fun getBaseHttpClient(timeout: Long = TIMEOUT): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
