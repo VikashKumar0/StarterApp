@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "717719064359",
+    "project_id": "login-sample-bdccb",
+    "storage_bucket": "login-sample-bdccb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:717719064359:android:51d14efa86623b5050a302",
+        "android_client_info": {
+          "package_name": "com.vikash.login"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "717719064359-hkck1rkckjaja32vibpq3jjb814ht7q3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDScBeMhSqsa3HEaC5JfQbqhH_f1sFEOWQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "717719064359-hkck1rkckjaja32vibpq3jjb814ht7q3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
