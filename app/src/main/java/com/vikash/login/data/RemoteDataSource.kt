@@ -3,16 +3,19 @@ package com.vikash.login.data
 import com.vikash.login.data.common.Error
 import com.vikash.login.data.common.Result
 import com.vikash.login.data.models.LoginRequest
+import com.vikash.login.data.models.LoginUser
 import com.vikash.login.data.models.SignupRequest
-import com.vikash.login.data.network.LoginResponse
+import com.vikash.login.data.models.LoginResponse
 import com.vikash.login.data.network.RetrofitUtil
 import com.vikash.login.data.network.handleResult
 import com.vikash.login.data.network.tryWithErrorWrapper
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class RemoteDataSource {
-    val api = RetrofitUtil.createRetrofitApi(Companion.BASE_URL)
+
+class RemoteDataSource @Inject constructor(){
+    private val api = RetrofitUtil.createRetrofitApi(Companion.BASE_URL)
 
     companion object {
         private const val BASE_URL = "https://conduit.productionready.io/api/"
@@ -32,7 +35,7 @@ class RemoteDataSource {
             tryWithErrorWrapper {
                 api.login(
                     getHeaderMap(),
-                    body = LoginRequest(email, password)
+                    body = LoginRequest(LoginUser( email, password))
                 ).handleResult {
                     it
                 }

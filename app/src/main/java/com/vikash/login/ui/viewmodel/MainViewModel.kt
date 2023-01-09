@@ -1,20 +1,20 @@
 package com.vikash.login.ui.viewmodel
 
-import android.app.Application
-import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.ViewModel
 import com.vikash.login.ui.model.LoginState
-import com.vikash.login.data.db.UserDatabase
+import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-
-class MainViewModel(application: Application) : AndroidViewModel(application) {
+@HiltViewModel
+class MainViewModel @Inject constructor() : ViewModel() {
 
     private val coroutineScope = CoroutineScope(Dispatchers.IO)
-    private val db by lazy{ UserDatabase(getApplication()).userDao()}
+//    private val db by lazy{ UserDatabase(getApplication()).userDao()}
     val userDeleted = MutableLiveData<Boolean>()
     val signout = MutableLiveData<Boolean>()
 
@@ -25,7 +25,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
 
     fun onDeleteUser() {
         coroutineScope.launch {
-            LoginState.user?.let { user ->
+            LoginState.user?.let {
 //                db.deleteUser(user.id)
             }
             withContext(Dispatchers.Main){

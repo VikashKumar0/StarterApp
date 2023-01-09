@@ -18,7 +18,7 @@ import java.util.Properties
 import java.util.concurrent.TimeUnit
 
 object RetrofitUtil {
-    private val TAG = "RetrofitUtil"
+    private const val TAG = "RetrofitUtil"
     private const val TIMEOUT = 10000L
 
     private var prop: Properties = Properties()
@@ -30,7 +30,7 @@ object RetrofitUtil {
 
 
 
-    fun getBaseHttpClient(timeout: Long = TIMEOUT): OkHttpClient {
+    private fun getBaseHttpClient(timeout: Long = TIMEOUT): OkHttpClient {
         val httpClient = OkHttpClient.Builder()
         httpClient.readTimeout(timeout, TimeUnit.SECONDS)
         httpClient.connectTimeout(timeout, TimeUnit.SECONDS)
@@ -39,7 +39,7 @@ object RetrofitUtil {
         return httpClient.build()
     }
 
-    fun getRetrofit(
+    private fun getRetrofit(
         url: String, isScalar: Boolean,
         timeout: Long = TIMEOUT,
     ): Retrofit {
