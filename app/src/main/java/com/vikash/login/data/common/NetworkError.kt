@@ -7,7 +7,6 @@
 package com.vikash.login.data.common
 
 import com.google.gson.annotations.SerializedName
-import com.vikash.login.data.common.Error
 
 /**
  * CHP error responses.

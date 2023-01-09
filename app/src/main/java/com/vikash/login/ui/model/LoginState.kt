@@ -1,7 +1,6 @@
 package com.vikash.login.ui.model
 
-import com.google.firebase.auth.FirebaseUser
-import com.vikash.login.data.network.User
+import com.vikash.login.data.models.User
 
 object LoginState {
 
