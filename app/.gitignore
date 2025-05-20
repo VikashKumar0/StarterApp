@@ -1,6 +1,6 @@
 /build
 /shelf/
 .idea
-/.idea/
+/.idea/*
 /.gradle/*
 /local.properties
