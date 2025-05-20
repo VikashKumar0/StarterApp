@@ -1,1 +1,6 @@
 /build
+/shelf/
+.idea
+/.idea/
+/.gradle/*
+/local.properties
