@@ -1,4 +1,4 @@
-package com.vikash.login.data.network
+package com.vikash.login.data.models
 
 data class LoginResponse(var user: User, var errors: LoginError)
 
