@@ -37,6 +37,8 @@ class MainFragment : Fragment() {
         deleteUserBtn.setOnClickListener { onDelete() }
 
         observeViewModel()
+
+
     }
 
     fun observeViewModel() {
