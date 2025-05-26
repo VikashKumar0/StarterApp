@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.viewmodel.view.LoginFragment"
+    tools:context=".ui.view.LoginFragment"
     android:background="@color/bkg_blue">
 
     <EditText
@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="Username*"
+        android:hint="Email*"
         android:layout_marginTop="@dimen/std_large_margin"
         android:layout_marginBottom="8dp"
         app:layout_constraintEnd_toEndOf="parent"
