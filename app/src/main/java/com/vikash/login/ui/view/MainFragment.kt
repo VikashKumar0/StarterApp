@@ -35,6 +35,7 @@ class MainFragment : Fragment() {
 
         signoutBtn.setOnClickListener { onSignout() }
         deleteUserBtn.setOnClickListener { onDelete() }
+
         observeViewModel()
     }
 
