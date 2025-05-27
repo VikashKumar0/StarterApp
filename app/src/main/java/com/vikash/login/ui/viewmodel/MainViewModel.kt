@@ -26,7 +26,7 @@ class MainViewModel @Inject constructor() : ViewModel() {
     fun onDeleteUser() {
         coroutineScope.launch {
             LoginState.user?.let {
-//                db.deleteUser(user.id)
+//              db.deleteUser(user.id)
             }
             withContext(Dispatchers.Main){
                 LoginState.logout()
